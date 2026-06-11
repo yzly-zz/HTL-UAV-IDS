@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tech-bg: #0a0e17;
+  --tech-panel: #111827;
+  --tech-border: #1f2937;
+}
+
+body {
+  @apply bg-tech-bg text-gray-100 font-tech;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.tech-card {
+  @apply bg-tech-panel border border-tech-border rounded-lg;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.tech-card-header {
+  @apply px-4 py-3 border-b border-tech-border flex items-center justify-between;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 3px;
+  }
+}
